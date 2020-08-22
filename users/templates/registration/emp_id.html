@@ -1,0 +1,29 @@
+<html>
+
+<head>
+    <link
+     rel="stylesheet"
+     href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <style>
+        .i-am-centered {
+            margin: auto;
+            max-width: 300px;
+            padding-top: 20%;
+        }
+    </style>
+</head>
+<body>
+    <div class="i-am-centered">
+        <form method="POST">
+            {% csrf_token %}
+            <div class="form-group">
+							<label>Employee ID </label>
+							{{ form.emp_id }} 
+						</div>
+						<button type="submit" value="add_emp" class="btn btn-primary">Submit</button>
+						<input type="hidden" name="next" value="{{ next }}">
+        </form>
+    </div>
+</body>
+
+</html>

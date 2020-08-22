@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<head>
+  <meta name="User Auth" charset="utf-8">
+  <title>User Authentication</title>
+</head>
+<body>
+  <h1>This is the auth page</h1>
+  {% if user.is_authenticated %}
+  <h2>Your Name is {{user.email}}</h2>
+  {% else %}
+  <h2>You haven't logged in</h2>
+  {% endif %}
+</body>
